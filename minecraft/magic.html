@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Minecraft</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--main css for homepage-->
+    <link rel="stylesheet" href=".\css\minecraft-template.css">
+    <link rel="stylesheet" href=".\css\magic.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-fixed-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"> </span>
+                    <span class="icon-bar"> </span>
+                    <span class="icon-bar"> </span>                    
+                </button>
+                <a class="navbar-brand" href="minecraft.html">
+                    <img src=".\img\麥塊3.png" />
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="illustration.html">圖鑑</a>
+                    </li>
+                    <li>
+                        <a href="potion.html">藥水合成</a>
+                    </li>
+                    <li>
+                        <a href="magic.html">附魔書</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+    </header>
+    <div class="container-fluid" id="app">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="minecraft-top">
+                    <img src=".\img\Mclogo.svg ">
+                </div>
+                <table class="book-description ">
+                    <caption>附魔書</caption>
+                    <tr>
+                        <td>ID</td>
+                        <td>附魔識別號，可用於物品的數據標籤中為其增加附魔</td>
+                    </tr>
+                    <tr>
+                        <td>最高等級</td>
+                        <td>能夠合理獲得的最高等級。更高的等級能夠使用指令獲得。</td>
+                    </tr>
+                    <tr>
+                        <td>適用物品</td>
+                        <td>在生存模式中能通過附魔台合理獲得此附魔的物品。所有材質的同種類物品都能夠獲得此附魔（但一些材質更容易獲得）。</td>
+                    </tr>
+                    <tr>
+                        <td>相容物品</td>
+                        <td>在生存模式中無法在附魔台上獲得此附魔的物品，但可以通過鐵砧和附魔書獲得。</td>
+                    </tr>
+                    <tr>
+                        <td>附魔權重</td>
+                        <td>此附魔在附魔台選項中出現的相對機率。</td>
+                    </tr>
+                </table>
+                <div class="book">
+                    <table class="book">
+                        <caption>下表描述玩家在生存模式中可以合理獲得的附魔。其餘的附魔組合可通過創造模式、作弊、MOD或第三方軟體獲得。</caption>
+                        <th>附魔屬性</th>
+                        <th>說明</th>
+                        <th>最高等級</th>
+                        <th>適用物品</th>
+                        <th>相容物品</th>
+                        <th>權重</th>
+                        <tr v-for="item in book">
+                            <td class>
+                                {{item.type}}
+                            </td>
+                            <td>
+                                {{item.des}}
+                            </td>
+                            <td>
+                                {{item.level}}
+                            </td>
+                            <td>
+                                <img :src="item.o1">
+                            </td>
+                            <td>
+                                <img :src="item.o2 "> {{item.o3}}
+                            </td>
+                            <td>
+                                {{item.hard}}
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js "></script>
+    <script src="./js/magic.js "></script>
+
+</body>
+
+</html>

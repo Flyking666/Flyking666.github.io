@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS控制CSS變量</title>
+</head>
+
+<body>
+    <h2>JS控制CSS變量</h2>
+
+    <div class="controls">
+        <label for="spacing">間距:</label>
+        <input id="spacing" type="range" name="spacing" min="10" max="200" value="10" data-sizing="px">
+
+        <label for="blur">模糊:</label>
+        <input id="blur" type="range" name="blur" min="0" max="25" value="10" data-sizing="px">
+
+        <label for="base">邊框顏色</label>
+        <input id="base" type="color" name="base" value="#ffc600">
+    </div>
+
+    <img src="img\BG.jpg" width="1000">
+    <style>
+        /*設定變量*/
+        
+         :root {
+            --spacing: 10px;
+            --blur: 10px;
+            --base: #ffc600;
+        }
+        
+        img {
+            padding: var(--spacing);
+            filter: blur(var(--blur));
+            background: var(--base);
+        }
+        
+        body {
+            text-align: center;
+            background: #EAE9E2;
+            color: #504B46;
+            font-family: 'helvetica neue', sans-serif;
+            font-weight: 100;
+            font-size: 50px;
+        }
+        
+        .controls {
+            margin-bottom: 50px;
+        }
+        
+        input {
+            width: 100px;
+        }
+    </style>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            menu.style.display == "none"
+            if (menu.style.display == "none") {
+                menu.style.display = "block";
+            } else {
+                menu.style.display = "none";
+            }
+        }
+
+        function changeWord() {
+            var spanobj = document.getElementById('emotion');
+            // spanobj.innerHTML = "bad";
+            if (spanobj.innerHTML == "good") {
+                spanobj.innerHTML = "bad";
+            } else {
+                spanobj.innerHTML = "good";
+            };
+        };
+
+
+        var inputs = document.querySelectorAll('.controls input');
+
+        inputs.forEach(input => input.addEventListener('change', handlerUpdate));
+        inputs.forEach(input => input.addEventListener('mousemove', handlerUpdate));
+
+        function handlerUpdate(event) {
+            // console.log(event);
+            var unit = this.dataset.sizing || ''; //單位
+            document.documentElement.style.setProperty('--' + this.name, this.value + unit); //叫出CSS檔案重設值，
+
+        }
+    </script>
+
+</body>
+
+</html>

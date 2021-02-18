@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Minecraft</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--main css for homepage-->
+    <link rel="stylesheet" href=".\css\minecraft-template.css">
+    <link rel="stylesheet" href=".\css\illustration.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-fixed-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"> </span>
+                                <span class="icon-bar"> </span>
+                                <span class="icon-bar"> </span>
+                            </button>
+                <a class="navbar-brand" href="minecraft.html">
+                    <img src=".\img\麥塊3.png" />
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="illustration.html">圖鑑</a>
+                    </li>
+                    <li>
+                        <a href="potion.html">藥水合成</a>
+                    </li>
+                    <li>
+                        <a href="magic.html">附魔書</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container-fluid" id="app">
+        <div class="select row">
+            <div class="col-xs-12">
+                <div class="search">
+                    <div class="search1">
+                        物品種類搜索
+                        <select v-model="input.type">
+                            <option v-for="item in optionlist">{{item.type}}</option>
+                        </select>
+                    </div>
+                    <div class="search2">
+                        物品名稱搜索
+                        <input type="text" v-model.trim="input.name">
+                    </div>
+                    <div class="search3">
+                        <a target="blank" href="https://minecraft-zh.gamepedia.com/Minecraft_Wiki?variant=zh-tw">資料皆參考於MINECRAFT WIKI</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrap row">
+            <div class="col-xs-12">Minecraft圖鑑</div>
+            <div class="content col-xs-6 col-sm-3 col-md-2 col-lg-1" v-for="item in nameMenu">
+                <a target="blank" :href="item.href"><img :src="item.src" :title="item.title"></a>
+                <div class="item.name">{{ item.name }}</div>
+            </div>
+        </div>
+        <!--
+        <div class="wrap stone row">
+            <div class="content col-xs-4 col-sm-3 col-md-2 col-lg-1" v-for="item in typeMenu">
+                <img :src="item.src">
+                <div class="item.name">{{ item.name }}</div>
+            </div>
+        </div>
+        <div class="wrap wood row">
+            <div class="col-xs-12">建築方塊-木類</div>
+            <div class="content col-xs-4 col-sm-3 col-md-2 col-lg-1" v-for=" item in all.wood">
+                <img :src="item.src">
+                <div class="item.name">{{ item.name }}</div>
+            </div>
+        </div>
+        <div class="wrap mine row">
+            <div class="col-xs-12">建築方塊-礦物類</div>
+            <div class="content col-xs-4 col-sm-3 col-md-2 col-lg-1" v-for=" item in all.mine">
+                <img :src="item.src">
+                <div class="item.name">{{ item.name }}</div>
+            </div>
+        </div>
+        <div class="wrap coral row">
+            <div class="col-xs-12">建築方塊-珊瑚類</div>
+            <div class="content col-xs-4 col-sm-3 col-md-2 col-lg-1" v-for=" item in all.coral">
+                <img :src="item.src">
+                <div class="item.name">{{ item.name }}</div>
+            </div>
+        </div>
+        <div class="wrap BuildOther row">
+            <div class="col-xs-12">建築方塊-其他</div>
+            <div class="content col-xs-4 col-sm-3 col-md-2 col-lg-1" v-for=" item in all.BuildOther">
+                <img :src="item.src">
+                <div class="item.name">{{ item.name }}</div>
+            </div>
+        </div>
+        <div class="wrap decorate row">
+            <div class="col-xs-12">裝飾方塊</div>
+            <div class="content col-xs-4 col-sm-3 col-md-2 col-lg-1" v-for=" item in all.decorate">
+                <img :src="item.src">
+                <div class="item.name">{{ item.name }}</div>
+            </div>
+        </div>
+        <div class="wrap redstone row">
+            <div class="col-xs-12">紅石</div>
+            <div class="content col-xs-4 col-sm-3 col-md-2 col-lg-1" v-for=" item in all.redstone">
+                <img :src="item.src">
+                <div class="item.name">{{ item.name }}</div>
+            </div>
+        </div>
+        <div class="wrap transport row">
+            <div class="col-xs-12">交通</div>
+            <div class="content col-xs-4 col-sm-3 col-md-2 col-lg-1" v-for=" item in all.transport">
+                <img :src="item.src">
+                <div class="item.name">{{ item.name }}</div>
+            </div>
+        </div>
+        <div class="wrap other row">
+            <div class="col-xs-12">雜項</div>
+            <div class="content col-xs-4 col-sm-3 col-md-2 col-lg-1" v-for=" item in all.other">
+                <img :src="item.src">
+                <div class="item.name">{{ item.name }}</div>
+            </div>
+        </div>
+        <div class="wrap food row">
+            <div class="col-xs-12">食物</div>
+            <div class="content col-xs-4 col-sm-3 col-md-2 col-lg-1" v-for=" item in all.food">
+                <img :src="item.src">
+                <div class="item.name">{{ item.name }}</div>
+            </div>
+        </div>
+        <div class="wrap weapon row">
+            <div class="col-xs-12">戰鬥-武器</div>
+            <div class="content col-xs-4 col-sm-3 col-md-2 col-lg-1" v-for=" item in all.weapon">
+                <img :src="item.src">
+                <div class="item.name">{{ item.name }}</div>
+            </div>
+        </div>
+        <div class="wrap equipment row">
+            <div class="col-xs-12">戰鬥-裝備</div>
+            <div class="content col-xs-4 col-sm-3 col-md-2 col-lg-1" v-for=" item in all.equipment">
+                <img :src="item.src">
+                <div class="item.name">{{ item.name }}</div>
+            </div>
+        </div>
+        <div class="wrap potion row">
+            <div class="col-xs-12">藥水</div>
+            <div class="content col-xs-4 col-sm-3 col-md-2 col-lg-1" v-for=" item in all.potion">
+                <img :src="item.src">
+                <div class="item.name">{{ item.name }}</div>
+            </div>
+        </div>
+    -->
+    </div>
+    <script src=" https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js "></script>
+    <script src="./js/minecraft.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+body {
+    background-color: rgb(19, 57, 95);
+    font-family: 'Noto Sans TC', sans-serif;
+    font-size: 18px;
+    color: #fff;
+}
+
+.container-fluid {
+    margin-top: 5%;
+}
+
+.row {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    width: 60%;
+    border-style: solid;
+    border-color: rgb(250, 185, 6);
+    border-width: 5px;
+}
+
+.col-xs-12 {
+    padding: 15px;
+}
+
+hr {
+    text-align: center;
+    width: 98%;
+    border-width: 3px;
+    border-color: rgb(250, 185, 6);
+}
+
+#resume {
+    line-height: 30px;
+}
+
+.resume {
+    font-size: 32px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.resume>img {
+    vertical-align: middle;
+    width: 30%;
+}
+
+.resume-01>ul {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.resume-01>ul>li>img {
+    width: 50px;
+    padding: 10px;
+}
+
+.resume-01>ul>li>a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.resume-01>ul>li>a:hover {
+    color: #000;
+}
+
+.resume-01>ul>li>a>img {
+    width: 50px;
+    padding: 10px;
+}
+
+.resume-02>ul>li>span {
+    font-size: 18px;
+    color: rgb(246, 195, 55);
+    ;
+}
+
+.resume-03>p {
+    text-indent: 2em;
+    line-height: 30px;
+}
+
+span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@media(max-width:450px) {
+    body {
+        font-size: 16px;
+    }
+    .row {
+        width: 100%;
+    }
+    .resume>img {
+        width: 100%;
+    }
+    .resume {
+        font-size: 20px;
+        text-align: center;
+    }
+    .resume>span {
+        font-size: 16px;
+    }
+}

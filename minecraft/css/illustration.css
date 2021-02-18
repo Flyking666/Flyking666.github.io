@@ -1,0 +1,68 @@
+.select {
+    margin-top: 80px;
+}
+
+#app .wrap {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 90%;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: #fff;
+}
+
+#app .wrap img {
+    width: 70px;
+    margin-top: 10px;
+}
+
+#app .content {
+    height: 135px;
+    width: 130px;
+    margin: 5px;
+    padding: 5px;
+    font-size: 14px;
+    border: solid;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.select div {
+    float: left;
+    font-weight: bold;
+}
+
+.select select,
+.select input {
+    height: 40px;
+}
+
+.search div {
+    background: #ddd;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.search img {
+    padding: 5px;
+    width: 40px;
+}
+
+.search1 {
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.search2 {
+    border-radius: 10px;
+}
+
+.search3 {
+    border-radius: 10px;
+    margin-left: 50px;
+}
+
+.search3 a {
+    color: black;
+}

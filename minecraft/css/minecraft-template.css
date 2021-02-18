@@ -1,0 +1,43 @@
+body {
+    font-size: 24px;
+    font-family: 微軟正黑體;
+    background-image: url(../img/background.png);
+}
+
+.row {
+    margin: 0px;
+}
+
+.navbar {
+    background: #000;
+}
+
+.navbar img {
+    width: 125px;
+}
+
+#navbarSupportedContent a {
+    color: #fff;
+}
+
+#navbarSupportedContent a:hover {
+    background: #333;
+}
+
+#navbarSupportedContent li {
+    background: #000;
+}
+
+ul.dropdown-menu {
+    padding: 0px;
+}
+
+ul.dropdown-menu a {
+    height: 48px;
+    font-size: 24px;
+    text-align: center;
+}
+
+#app {
+    padding: 0px;
+}

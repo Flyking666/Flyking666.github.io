@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>驗證表單</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <form id=validationForm>
+            <div class="container-fuild">
+                <div class="row">
+                    <div class="col-xs-12 format">
+                        <label for="email-name">姓名</label>
+                        <input id="email-name" class="input-style" type="text" name="name" placeholder="請輸入姓名">
+                    </div>
+                    <div class="col-xs-12 format">
+                        <label for="email-address">電子郵件</label>
+                        <input id="email-address" class="input-style" type="text" name="email" placeholder="請輸入電子郵件">
+                    </div>
+                    <div class="col-xs-12 format">
+                        <label for="email-sex">性別</label>
+                        <input class="sex" type="radio" name="email-sex" value="male">男性
+                        <input class="sex" type="radio" name="email-sex" value="female">女性
+                    </div>
+                    <div class="col-xs-12 format">
+                        <label for="email-password">密碼</label>
+                        <input id="email-password" class="input-style" type="password" name="password" placeholder="請輸入密碼">
+                    </div>
+                    <div class="col-xs-12 format">
+                        <label for="email-password2">確認密碼</label>
+                        <input id="email-password2" class="input-style" type="password" name="password2" placeholder="請確認密碼">
+                    </div>
+                    <div class="col-xs-12 format">
+                        <textarea id="mail-message" name="message" rows="8" cols="50" placeholder="備註"></textarea>
+                    </div>
+                    <div class="col-xs-12 format">
+                        <button id="submit-button" type="submit" name="submit"><span>提交</span></button>
+                    </div>
+                </div>
+        </form>
+        <div id="error"></div>
+        </div>
+    </div>
+    <style>
+        #submit-button span {
+            transition: 0.5s;
+        }
+        
+        #submit-button span::after {
+            content: "\00bb";
+            position: absolute;
+            right: 0px;
+            opacity: 0;
+        }
+        
+        #submit-button:hover span {
+            position: relative;
+            padding-right: 20px;
+        }
+        
+        #submit-button:hover span::after {
+            right: 0;
+            opacity: 1;
+        }
+        
+        body {
+            font-family: 微軟正黑體;
+            font-size: 24px;
+            background-color: azure;
+        }
+        
+        .row {
+            width: 60%;
+            margin: auto;
+            margin-top: 100px;
+        }
+        
+        .input-style {
+            border-style: solid;
+            border-color: grey;
+            border-radius: 5px;
+            font-size: 1.1em;
+            width: 60%;
+        }
+        
+        .format {
+            margin: 10px;
+            padding: 0px;
+        }
+        
+        label {
+            width: 200px;
+            font-size: 1.2em;
+        }
+        
+        #submit-button {
+            border-style: solid;
+            border-color: #000000;
+            border-radius: 5px;
+            background-color: rgb(246, 167, 246);
+            font-weight: bold;
+            width: 90%;
+        }
+        
+        textarea {
+            width: 90%;
+            padding: 1px;
+        }
+        
+        #error {
+            margin-left: 21%;
+            font-weight: bold;
+            width: 60%;
+        }
+        
+        @media(max-width: 375px) {
+            .row {
+                width: 90%;
+            }
+            label {
+                width: 40%;
+            }
+            .input-style {
+                width: 90%;
+            }
+        }
+        
+        @media(max-width: 414px) {
+            .row {
+                width: 90%;
+            }
+            label {
+                width: 40%;
+            }
+            .input-style {
+                width: 90%;
+            }
+        }
+        
+        @media(max-width: 768px) {
+            .row {
+                width: 90%;
+            }
+            label {
+                width: 40%;
+            }
+            .input-style {
+                width: 90%;
+            }
+        }
+    </style>
+    <script type="text/javascript">
+        $("#validationForm").submit(function(event) {
+            event.preventDefault();
+            var errorMessage = "";
+
+            var name = $("#email-name").val();
+            var address = $("#email-address").val();
+            var password = $("#email-password").val();
+            var password2 = $("#email-password2").val();
+            var message = $("#mail-message").val();
+
+
+            function isValidEmailAddress(emailAddress) {
+                var pattern = /^\b[A-Z0-9-]+@[A-Z]+\.com\b/i;
+                return pattern.test(emailAddress);
+            }
+
+
+            if (name == "" || address == "" || password == "" || password2 == "" || message == "") {
+                errorMessage = "請填入完整資訊";
+            } else if (!isValidEmailAddress(address)) {
+                errorMessage = "請輸入正確的郵件格式";
+            } else if (password != password2) {
+                errorMessage = "請輸入正確密碼";
+            }
+            if (errorMessage == "") {
+                $("#error").html("訊息已送出");
+                $("#error").css("color", "green");
+            } else {
+                $("#error").html(errorMessage);
+                $("#error").css("color", "red");
+            }
+        });
+    </script>
+</body>
+
+</html>

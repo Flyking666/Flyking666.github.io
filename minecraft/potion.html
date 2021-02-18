@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Minecraft</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--main css for homepage-->
+    <link rel="stylesheet" href=".\css\minecraft-template.css">
+    <link rel="stylesheet" href=".\css\potion.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-fixed-top">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"> </span>
+                    <span class="icon-bar"> </span>
+                    <span class="icon-bar"> </span>                    
+                </button>
+                <a class="navbar-brand" href="minecraft.html">
+                    <img src=".\img\麥塊3.png" />
+                </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="illustration.html">圖鑑</a>
+                    </li>
+                    <li>
+                        <a href="potion.html">藥水合成</a>
+                    </li>
+                    <li>
+                        <a href="magic.html">附魔書</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+    </header>
+    <div class="potion table-responsive">
+        <table class="element">
+            <caption class="title">藥水材料</caption>
+            <tr>
+                <td><img src=".\img\藥水\幽靈之淚.png"></td>
+                <td><img src=".\img\藥水\發酵蜘蛛根.png"></td>
+                <td><img src=".\img\藥水\烈焰粉.png"></td>
+                <td><img src=".\img\藥水\岩漿球.png"></td>
+                <td><img src=".\img\藥水\鑲金西瓜片.png"></td>
+                <td><img src=".\img\藥水\金胡蘿蔔.png"></td>
+                <td><img src=".\img\藥水\兔子腳.png"></td>
+                <td><img src=".\img\藥水\夜魅皮膜.png"></td>
+                <td><img src=".\img\藥水\龍之吐息.png"></td>
+                <td><img src=".\img\藥水\鍋釜.png"></td>
+                <td><img src=".\img\藥水\釀造台.png"></td>
+            </tr>
+            <tr>
+                <td>幽靈之淚</td>
+                <td>發酵蜘蛛根</td>
+                <td>烈焰粉</td>
+                <td>岩漿球</td>
+                <td>鑲金西瓜片</td>
+                <td>金胡蘿蔔</td>
+                <td>兔子腳</td>
+                <td>夜魅皮膜</td>
+                <td>龍之吐息</td>
+                <td>鍋釜</td>
+                <td>釀造台</td>
+            </tr>
+        </table>
+    </div>
+    <div class="potion table-responsive">
+        <table class="potion">
+            <caption class="title">藥水效果</caption>
+            <tr>
+                <td> 藥水</td>
+                <td> 名稱<br/> （製作材料） </td>
+                <td> 基本版<br/> </td>
+                <td> 延長版<br/> <img class="content" src=".\img\紅石\紅石粉.png" title="紅石粉"></td>
+                <td> 加強版<br/> <img class="content" src=".\img\雜項\螢石粉.png" title="螢石粉"></td>
+            </tr>
+            <tr>
+                <td rowspan="20"> <img src=".\img\藥水\藥水.gif"> </td>
+                <td>水瓶</td>
+                <td rowspan="4" colspan="3">無效果</td>
+            </tr>
+            <tr>
+                <td>平凡藥水</td>
+            </tr>
+            <tr>
+                <td>黏稠藥水</td>
+            </tr>
+            <tr>
+                <td> 基礎藥水 <br /> <img class="content" src=".\img\雜項\地獄疙瘩.png" title="地獄疙瘩"> </td>
+            </tr>
+            <tr>
+                <td> 夜視藥水 <br /> <img class="content" src=".\img\藥水\金胡蘿蔔.png" title="金胡蘿蔔"> </td>
+                <td> 夜視 <br />（3:00） </td>
+                <td> 夜視 <br />（8:00） </td>
+                <td> 無</td>
+            </tr>
+            <tr>
+                <td> 隱形藥水 <br />夜視藥水 + <img class="content" src=".\img\藥水\發酵蜘蛛根.png" title="發酵蜘蛛根"> </td>
+                <td> 隱形 <br />（3:00） </td>
+                <td> 隱形 <br />（8:00） </td>
+                <td>無 </td>
+            </tr>
+            <tr>
+                <td> 跳躍藥水 <br /> <img class="content" src=".\img\藥水\兔子腳.png" title="兔子腳"> </td>
+                <td> 跳躍 <br />（3:00） </td>
+                <td> 跳躍<br />（8:00） </td>
+                <td> 跳躍II<br />（1:30） </td>
+            </tr>
+            <tr>
+                <td> 抗火藥水 <br /> <img class="content" src=".\img\藥水\岩漿球.png" title="岩漿球">
+                </td>
+                <td> 抗火 <br />（3:00） </td>
+                <td> 抗火 <br />（8:00） </td>
+                <td> 無 </td>
+            </tr>
+            <tr>
+                <td> 迅捷藥水 <br /> <img class="content" src=".\img\雜項\糖.png" title="糖"> </td>
+                <td> 加速 <br />（3:00）（+20%） </td>
+                <td> 加速 <br />（8:00） （+20%） </td>
+                <td> 加速II <br />（1:30） （+40%） </td>
+            </tr>
+            <tr>
+                <td> 緩速藥水 <br />抗火/迅捷＋ <img class="content" src=".\img\藥水\發酵蜘蛛根.png" title="發酵蜘蛛根"> </td>
+                <td> 緩速 <br />（1:30）(-15%) </td>
+                <td> 緩速 <br />（4:00）(-15%) </td>
+                <td> 緩速IV <br />（0:20）(-60%) </td>
+            </tr>
+            <tr>
+                <td> 龜仙藥水 <br /> <img class="content" src=".\img\戰鬥\海龜殼.png" title="海龜殼"> </td>
+                <td> 緩速IV(-60%) <br />抗性III （0:20） </td>
+                <td> 緩速IV(-60%) <br />抗性III （0:40） </td>
+                <td> 緩速VI(-90%) <br />抗性IV （0:20） </td>
+            </tr>
+            <tr>
+                <td> 水下呼吸 <br /> <img class="content" src=".\img\食品\河豚.png" title="河豚"> </td>
+                <td> 水下呼吸 <br />（3:00） </td>
+                <td> 水下呼吸 <br />（8:00） </td>
+                <td> 無</td>
+
+            </tr>
+            <tr>
+                <td> 治療藥水 <br /> <img class="content" src=".\img\藥水\鑲金西瓜片.png" title="鑲金西瓜片"> </td>
+                <td> 立即治療I</td>
+                <td> 無</td>
+                <td> 立即治療II</td>
+            </tr>
+            <tr>
+                <td> 傷害藥水 <br />治療/劇毒＋ <img class="content" src=".\img\藥水\發酵蜘蛛根.png" title="發酵蜘蛛根"> </td>
+                <td> 立即傷害I</td>
+                <td> 無</td>
+                <td> 立即傷害II</td>
+            </tr>
+            <tr>
+                <td> 劇毒藥水 <br /> <img class="content" src=".\img\食品\蜘蛛眼.png" title="蜘蛛眼"> </td>
+                <td> 劇毒 <br />（0:45） </td>
+                <td> 劇毒 <br />（1:30） </td>
+                <td> 劇毒II <br />（0:21） </td>
+            </tr>
+            <tr>
+                <td> 回復藥水 <br /> <img class="content" src=".\img\藥水\幽靈之淚.png" title="幽靈之淚"> </td>
+                <td> 回復 <br />（0:45） </td>
+                <td> 回復 <br />（1:30） </td>
+                <td> 回復II <br />（0:22） </td>
+            </tr>
+            <tr>
+                <td> 力量藥水 <br /> <img class="content" src=".\img\藥水\烈焰粉.png" title="烈焰粉"> </td>
+                <td> 力量 <br />（3:00）（+3 ATK） </td>
+                <td> 力量 <br />（8:00）（+3 ATK） </td>
+                <td> 力量II <br />（1:30）（+6 ATK） </td>
+            </tr>
+            <tr>
+                <td> 虛弱藥水 <br />無效藥水＋ <img class="content" src=".\img\藥水\發酵蜘蛛根.png" title="發酵蜘蛛根"> </td>
+                <td> 虛弱 <br />（1:30）（-4 ATK） </td>
+                <td> 虛弱 <br />（4:00）（-4 ATK） </td>
+                <td> 無</td>
+            </tr>
+            <tr>
+                <td> 幸運藥水 <br />（創造模式下取得） </td>
+                <td> 幸運（5:00）</td>
+                <td> 無</td>
+                <td> 無</td>
+            </tr>
+            <tr>
+                <td> 緩降藥水 <br /> <img class="content" src=".\img\藥水\夜魅皮膜.png" title="夜魅皮膜"> </td>
+                <td> 緩降 <br />（1:30） </td>
+                <td> 緩降 <br />（4:00） </td>
+                <td> 無</td>
+            </tr>
+        </table>
+        <table>
+            <caption>藥水加入<img class="content" src=".\img\雜項\火藥.png" title="火藥粉">即可變成<span>飛濺藥水</span>， 藥水加入<img class="content" src=".\img\藥水\龍之吐息.png" title="龍之吐息">即可變成<span>滯留藥水</span></caption>
+        </table>
+    </div>
+    <!-- <table>
+            <caption>飛濺藥水<img class="content" src=".\img\雜項\火藥.png" title="火藥粉"></caption>
+            <tr>
+                <td rowspan="20"> <img src=".\img\藥水\飛濺藥水.gif"> </td>
+                <td>飛濺－水瓶</td>
+                <td rowspan="4" colspan="3">無效果</td>
+            </tr>
+            <tr>
+                <td> 飛濺－平凡藥水</td>
+            </tr>
+            <tr>
+                <td> 飛濺－黏稠藥水</td>
+            </tr>
+            <tr>
+                <td> 飛濺－基礎藥水</td>
+            </tr>
+            <tr>
+                <td> 飛濺－夜視藥水</td>
+                <td> 夜視 <br />（3:00） </td>
+                <td> 夜視 <br />（8:00） </td>
+                <td> 無 </td>
+            </tr>
+            <tr>
+                <td> 飛濺－隱形藥水</td>
+                <td> 隱形 <br />（3:00） </td>
+                <td> 隱形 <br />（8:00） </td>
+                <td> 無</td>
+            </tr>
+            <tr>
+                <td> 飛濺－跳躍藥水</td>
+                <td> 跳躍 <br />（3:00） </td>
+                <td> 跳躍 <br />（8:00） </td>
+                <td> 跳躍II <br />（1:30） </td>
+            </tr>
+            <tr>
+                <td> 飛濺－抗火藥水</td>
+                <td> 抗火 <br />（3:00） </td>
+                <td> 抗火 <br />（8:00） </td>
+                <td> 無</td>
+            </tr>
+            <tr>
+                <td> 飛濺－迅捷藥水</td>
+                <td> 加速 <br />（3:00）（+20%） </td>
+                <td> 加速 <br />（8:00）（+20%） </td>
+                <td> 加速II <br /> （1:30）（+40%） </td>
+            </tr>
+            <tr>
+                <td> 飛濺－緩速藥水</td>
+                <td> 緩速 <br />（1:30）（-15%） </td>
+                <td> 緩速 <br />（4:00）（-15%） </td>
+                <td> 緩速IV <br />（0:20）（-60%） </td>
+            </tr>
+            <tr>
+                <td> 飛濺－龜仙藥水</td>
+                <td> 緩速IV（-60%） <br /> 抗性III（0:20） </td>
+                <td> 緩速IV（-60%） <br /> 抗性III（0:40） </td>
+                <td> 緩速VI（-90%） <br /> 抗性IV（0:20） </td>
+            </tr>
+            <tr>
+                <td> 飛濺－水下呼吸</td>
+                <td> 水下呼吸 <br />（3:00） </td>
+                <td> 水下呼吸 <br />（8:00） </td>
+                <td> 無</td>
+
+            </tr>
+            <tr>
+                <td> 飛濺－治療藥水</td>
+                <td> 立即治療I</td>
+                <td> 無</td>
+                <td> 立即治療II</td>
+            </tr>
+            <tr>
+                <td> 飛濺－傷害藥水</td>
+                <td> 立即傷害I</td>
+                <td> 無</td>
+                <td> 立即傷害II</td>
+            </tr>
+            <tr>
+                <td> 飛濺－劇毒藥水</td>
+                <td> 劇毒 <br />（0:45） </td>
+                <td> 劇毒 <br />（1:30） </td>
+                <td> 劇毒II <br />（0:21） </td>
+            </tr>
+            <tr>
+                <td> 飛濺－回復藥水</td>
+                <td> 回復 <br />（0:45） </td>
+                <td> 回復 <br />（1:30） </td>
+                <td> 回復II <br />（0:22） </td>
+            </tr>
+            <tr>
+                <td> 飛濺－力量藥水</td>
+                <td> 力量 <br />（3:00）（+3 ATK） </td>
+                <td> 力量 <br />（8:00）（+3 ATK） </td>
+                <td> 力量II <br />（1:30）（+6 ATK） </td>
+            </tr>
+            <tr>
+                <td> 飛濺－虛弱藥水</td>
+                <td> 虛弱 <br />（1:30）（-4 ATK） </td>
+                <td> 虛弱 <br />（4:00）（-4 ATK） </td>
+                <td> 無</td>
+            </tr>
+            <tr>
+                <td> 飛濺－幸運藥水</td>
+                <td> 幸運 <br />（5:00） </td>
+                <td> 無</td>
+                <td> 無</td>
+            </tr>
+            <tr>
+                <td>飛濺－緩降藥水</td>
+                <td> 緩降 <br />（1:30） </td>
+                <td> 緩降 <br />（4:00） </td>
+                <td> 無</td>
+            </tr>
+        </table> -->
+    <!-- <table>
+            <caption>滯留藥水<img class="content" src=".\img\藥水\龍之吐息.png" title="龍之吐息"></caption>
+            <tr>
+                <td rowspan="20"> <img src=".\img\藥水\滯留藥水.gif"> </td>
+                <td>滯留－水瓶</td>
+                <td rowspan="4" colspan="3">無效果</td>
+            </tr>
+            <tr>
+                <td> 滯留－平凡藥水</td>
+            </tr>
+            <tr>
+                <td> 滯留－黏稠藥水</td>
+            </tr>
+            <tr>
+                <td> 滯留－基礎藥水</td>
+            </tr>
+            <tr>
+                <td> 滯留－夜視藥水</td>
+                <td> 夜視 <br />（0:45） </td>
+                <td> 夜視 <br />（2:00） </td>
+                <td> 無</td>
+            </tr>
+            <tr>
+                <td>滯留－隱形藥水</td>
+                <td> 隱形 <br />（0:45） </td>
+                <td> 隱形 <br />（2:00） </td>
+                <td> 無</td>
+            </tr>
+            <tr>
+                <td>滯留－跳躍藥水</td>
+                <td> 跳躍 <br />（0:45） </td>
+                <td> 跳躍 <br />（2:00） </td>
+                <td> 跳躍II <br />（0:22） </td>
+            </tr>
+            <tr>
+                <td>滯留－抗火藥水</td>
+                <td> 抗火 <br />（0:45） </td>
+                <td> 抗火 <br />（2:00） </td>
+                <td> 無</td>
+            </tr>
+            <tr>
+                <td>滯留－迅捷藥水</td>
+                <td> 加速 <br />（0:22）（+20%） </td>
+                <td> 加速 <br />（2:00） （+20%） </td>
+                <td> 加速II <br />（0:45）（+40%） </td>
+            </tr>
+            <tr>
+                <td>滯留－緩速藥水</td>
+                <td> 緩速 <br />（0:22） （-15%） </td>
+                <td> 緩速 <br />（1:00） （-15%） </td>
+                <td> 緩速IV <br />（0:05）（-60%） </td>
+            </tr>
+            <tr>
+                <td>滯留－龜仙藥水</td>
+                <td> 緩速IV（-60%） <br /> 抗性III（0:05） </td>
+                <td> 緩速IV（-60%） <br /> 抗性III（0:10） </td>
+                <td> 緩速VI（-90%） <br /> 抗性IV（0:05） </td>
+            </tr>
+            <tr>
+                <td>滯留－水下呼吸</td>
+                <td> 水下呼吸 <br />（0:45） </td>
+                <td> 水下呼吸 <br />（2:00） </td>
+                <td> 無</td>
+
+            </tr>
+            <tr>
+                <td> 滯留－治療藥水</td>
+                <td> 立即治療I</td>
+                <td> 無</td>
+                <td> 立即治療II</td>
+            </tr>
+            <tr>
+                <td> 滯留－傷害藥水</td>
+                <td> 立即傷害I</td>
+                <td> 無</td>
+                <td> 立即傷害II</td>
+            </tr>
+            <tr>
+                <td> 滯留－劇毒藥水</td>
+                <td> 劇毒 <br />（0:11） </td>
+                <td> 劇毒 <br />（1:22） </td>
+                <td> 劇毒II <br />（0:05） </td>
+            </tr>
+            <tr>
+                <td> 滯留－回復藥水</td>
+                <td> 回復 <br />（0:11） </td>
+                <td> 回復 <br />（0:22） </td>
+                <td> 回復II <br />（0:05） </td>
+            </tr>
+            <tr>
+                <td> 滯留－力量藥水</td>
+                <td> 力量 <br />（0:45）（+3 ATK） </td>
+                <td> 力量 <br />（2:00）（(+3 ATK） </td>
+                <td> 力量II <br />（0:22）（+6 ATK） </td>
+            </tr>
+            <tr>
+                <td>滯留－虛弱藥水</td>
+                <td> 虛弱 <br />（0:22）（-4 ATK） </td>
+                <td> 虛弱 <br />（1:00）（-4 ATK） </td>
+                <td> 無</td>
+            </tr>
+            <tr>
+                <td> 滯留－幸運藥水</td>
+                <td> 幸運 <br />（1:15） </td>
+                <td> 無</td>
+                <td> 無</td>
+            </tr>
+            <tr>
+                <td>滯留－緩降藥水</td>
+                <td> 緩降 <br />（0:22） </td>
+                <td> 緩降 <br />（1:00） </td>
+                <td> 無</td>
+            </tr>
+        </table> -->
+    <br />
+    </div>
+</body>
+
+</html>

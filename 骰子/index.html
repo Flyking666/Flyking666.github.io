@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="./dice.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-6 player1 active " id="player1">
+                <div class="crown-border"><img id="crown1" src="crown.png">Player1</div>
+                <div class="score" id="player1-current-score">0</div>
+                <div class="total-score">Total-Score
+                    <div id="player1-total-score">0</div>
+                </div>
+            </div>
+
+            <div class="col-xs-6 player2" id="player2">
+                <div class="crown-border"><img id="crown2" src="crown.png">Player2</div>
+                <div class="score" id="player2-current-score">0</div>
+                <div class="total-score">Total-Score
+                    <div id="player2-total-score">0</div>
+                </div>
+            </div>
+        </div>
+        <div class="row func">
+            <div class="col-xs-4"><button class="start">Start</button></div>
+            <div class="col-xs-4"><img class="dice-img" src="dice1.png"></div>
+            <div class="col-xs-4"><button class="reset">Reset</button></div>
+        </div>
+    </div>
+
+
+</body>
+<script src="./dice.js"></script>
+
+</html>
